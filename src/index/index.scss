@@ -1,1 +1,50 @@
 @import '../common/styles/_libs';
+section {
+  display: block;
+}
+
+.accordion
+{
+  background-color: #eee;
+  border: 1px solid #ccc;
+  width: 500px;
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+.accordion h2,
+.accordion p
+{
+  margin: 0;
+}
+.accordion p
+{
+  padding: 10px;
+}
+.accordion h2 a
+{
+  display: block;
+  position: relative;
+  font: 14px/1 'Trebuchet MS', 'Lucida Sans';
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
+}
+.accordion h2 a:hover
+{
+  background: #fff;
+}
+.accordion h2 + div
+{
+  height: 0;
+  overflow: hidden;
+  //-moz-transition: height 0.3s ease-in-out;
+  //-webkit-transition: height 0.3s ease-in-out;
+  //-o-transition: height 0.3s ease-in-out;
+  transition: height 0.3s ease-in-out;
+}
+.accordion :hover h2 + div,
+.accordion :active h2 + div
+{
+  height: 100px;
+}
